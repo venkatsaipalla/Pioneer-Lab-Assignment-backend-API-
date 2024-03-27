@@ -20,7 +20,7 @@ Follow these steps to run the project locally:
 2. Navigate to the project directory:
 
    ```bash
-   cd pioneer-lab-assignment
+   cd api
 
 3. Install dependencies:
 
