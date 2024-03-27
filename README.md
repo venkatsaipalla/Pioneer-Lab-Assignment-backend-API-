@@ -80,3 +80,16 @@ Follow these steps to run the project locally:
 
 ### Swagger Documentation
 ## Interactive API documentation is available at /api-docs endpoint. It provides detailed information about all the API endpoints, including request parameters and responses.
+![image](https://github.com/venkatsaipalla/Pioneer-Lab-Assignment-backend-API-/assets/72677771/bfaad7d6-2629-4f84-8ca5-6beef6a56807)
+![image](https://github.com/venkatsaipalla/Pioneer-Lab-Assignment-backend-API-/assets/72677771/96346ca7-e16d-4104-9d91-d88afa1e760c)
+![image](https://github.com/venkatsaipalla/Pioneer-Lab-Assignment-backend-API-/assets/72677771/3483936a-28c4-4840-85cf-de5910b68be9)
+![image](https://github.com/venkatsaipalla/Pioneer-Lab-Assignment-backend-API-/assets/72677771/eb8b886d-67b3-4c5d-97d4-6609d338e352)
+![image](https://github.com/venkatsaipalla/Pioneer-Lab-Assignment-backend-API-/assets/72677771/48e695dc-94a7-4e6d-8c0f-d9f86588b4f7)
+![image](https://github.com/venkatsaipalla/Pioneer-Lab-Assignment-backend-API-/assets/72677771/c8011650-0c9a-4622-9ec7-cd4a355c2f41)
+![image](https://github.com/venkatsaipalla/Pioneer-Lab-Assignment-backend-API-/assets/72677771/7c602e0c-bbf9-4540-a621-27a559adb72b)
+![image](https://github.com/venkatsaipalla/Pioneer-Lab-Assignment-backend-API-/assets/72677771/25bf49e1-d960-4187-a972-1515e5e904e4)
+
+
+
+
+
