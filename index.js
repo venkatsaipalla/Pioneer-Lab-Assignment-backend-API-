@@ -38,10 +38,7 @@ app.use(errorHandler);
 
 
 // Routes
-app.get('/', (req, res) => {
-  res.send('haii');
-});
-
+app.get("/", (req, res) => res.send("Express on Vercel"));
 app.use("/auth", authRoutes);
 app.use("/data", dataRoutes);
 // Use Ethereum routes
