@@ -6,14 +6,14 @@ import dotenv from "dotenv";
 import cors from "cors";
 import authRoutes from "./routes/authRoutes.js";
 import dataRoutes from "./routes/dataRoutes.js";
-import YAML from 'yamljs';
+import YAML from "yamljs";
 // Import Ethereum routes
-import ethereumRoutes from './routes/ethereumRoutes.js';
+import ethereumRoutes from "./routes/ethereumRoutes.js";
 // import ethereumRoutes from "./routes/ethereumRoutes.js";
 import swaggerUi from "swagger-ui-express";
 // import swaggerDocument from "./swagger.json";
-import { setupSwagger } from './swagger.js';
-import { errorHandler } from "./middleware/errorMiddleware.js";
+import { setupSwagger } from "./swagger.js";
+import { errorHandler } from "./app/middleware/errorMiddleware.js";
 
 dotenv.config();
 
@@ -36,16 +36,15 @@ app.use(cors());
 app.use(express.json());
 app.use(errorHandler);
 
-
 // Routes
 app.get("/", (req, res) => res.send("Express on Vercel"));
 app.use("/auth", authRoutes);
 app.use("/data", dataRoutes);
 // Use Ethereum routes
-app.use('/ethbalance', ethereumRoutes);
+app.use("/ethbalance", ethereumRoutes);
 
 // Load Swagger document
-const swaggerDocument = YAML.load('./swagger.yaml');
+const swaggerDocument = YAML.load("./swagger.yaml");
 
 // Serve Swagger UI
 setupSwagger(app, swaggerDocument);
