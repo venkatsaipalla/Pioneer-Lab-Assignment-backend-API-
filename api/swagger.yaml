@@ -81,6 +81,24 @@ paths:
           description: Unauthorized: No token provided or invalid token
         500:
           description: Internal server error
+  /ethbalance/{address}:
+    get:
+      summary: Retrieve Ethereum account balance (Protected)
+      parameters:
+        - in: path
+          name: address
+          description: Ethereum address to retrieve balance for
+          required: true
+          type: string
+      security:
+        - JWT: []
+      responses:
+        200:
+          description: Ethereum balance retrieved successfully
+        401:
+          description: Unauthorized: No token provided or invalid token
+        500:
+          description: Internal server error
 securityDefinitions:
   JWT:
     type: apiKey
