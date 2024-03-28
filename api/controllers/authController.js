@@ -46,6 +46,7 @@ export const login = async (req, res) => {
     const token = jwt.sign({ email: user.email }, config.secretKey, {
       expiresIn: config.jwtExpiration,
     });
+    
     // Set the JWT token in a cookie with expiration time
     res.cookie("jwt_access_token", token, {
       httpOnly: true,

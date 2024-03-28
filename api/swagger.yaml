@@ -30,7 +30,7 @@ paths:
         200:
           description: User logged in successfully
   /auth/logout:
-    get:
+    post:
       summary: Log out the current user
       responses:
         200:
