@@ -1,6 +1,8 @@
 # Pioneer-Lab-Assignment-backend-API-
 This project is a Node.js application that demonstrates various features including user authentication with JWT, fetching data from public APIs, Swagger documentation, securing routes, and retrieving Ethereum account balance using web3.js.
 
+## Live Link- https://pioneer-lab-assignment-backend-api.onrender.com/api-docs/#/
+
 ## Getting Started
 
 Follow these steps to run the project locally:
