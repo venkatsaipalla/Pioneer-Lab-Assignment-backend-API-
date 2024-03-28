@@ -37,7 +37,7 @@ app.use(express.json());
 app.use(errorHandler);
 
 // Routes
-app.get("/", (req, res) => res.send("Express on Vercel"));
+app.get("/", (req, res) => res.send("got to /api-docs for swagger documentation"));
 app.use("/auth", authRoutes);
 app.use("/data", dataRoutes);
 // Use Ethereum routes
