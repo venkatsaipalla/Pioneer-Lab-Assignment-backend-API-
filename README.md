@@ -47,38 +47,55 @@ Follow these steps to run the project locally:
 1. Register a new user: ``POST /auth/register``
    Body: ```{ "email": "user@example.com", "password": "Password123!" }```
    Errors:
-       400 Bad Request: If email or password is missing or invalid format.
-       409 Conflict: If the email already exists.
+       ```400 Bad Request```: If email or password is missing or invalid format.
+       ```409 Conflict```: If the email already exists.
 
 2. Log in with existing user credentials: ```POST /auth/login```
    Body: ```{ "email": "user@example.com", "password": "Password123!" }```
    Errors:
-       401 Unauthorized: If the email or password is incorrect.
+       ```401 Unauthorized```: If the email or password is incorrect.
 
 3. Log out the current user: ```GET /auth/logout```
    Errors:
-       401 Unauthorized: If the user is not logged in.
+       ```401 Unauthorized```: If the user is not logged in.
 
 4. Retrieve data from public APIs: ```GET /data```
-   Query parameters:
-       category: Filter data by category (case-insensitive)
-       limit: Limit the number of results returned
-   Errors:
-       400 Bad Request: If query parameters are invalid.
-       404 Not Found: If no data matches the criteria.
    
-5. Retrieve filtered data from public APIs (Protected): GET /data/filter
+   Query parameters:
+       category: Filter data by category (case-insensitive)
+
+   limit: Limit the number of results returned
+   Errors:
+       ```400 Bad Request```: If query parameters are invalid.
+       ```404 Not Found```: If no data matches the criteria.
+   
+6. Retrieve filtered data from public APIs (Protected):
+
+   ```GET /data/filter```
    Requires JWT authentication token obtained after successful login.
+
    Query parameters:
        category: Filter data by category (case-insensitive)
        limit: Limit the number of results returned
+   
    Errors:
-       401 Unauthorized: If no token is provided or the token is invalid.
+   ```401 Unauthorized```: If no token is provided or the token is invalid.
 
-6. Retrieve Ethereum account balance: GET /ethbalance/:address
-   Requires a valid Ethereum address as a parameter.
-   Errors:
-       500 Internal Server Error: If there is an issue fetching the balance.****   
+8. Ethereum Account Balance
+   ```GET /ethbalance/:address```
+Retrieves Ethereum account balance (Protected).
+
+Path Parameter:
+   address: Ethereum address to retrieve balance for
+   Requires authentication using JWT token.
+
+Response:
+
+```200: Ethereum balance``` retrieved successfully
+
+```401: Unauthorized``` (e.g., no token provided or invalid token)
+
+```500: Internal server error```
 
 ### Swagger Documentation
 ## Interactive API documentation is available at /api-docs endpoint. It provides detailed information about all the API endpoints, including request parameters and responses.
